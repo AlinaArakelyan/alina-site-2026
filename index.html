@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0f1a" />
+    <title>Alina Arakelyan — Software Engineer</title>
+    <meta name="description" content="Portfolio for Alina Arakelyan, senior full-stack software engineer." />
+
+    <meta property="og:title" content="Alina Arakelyan — Software Engineer" />
+    <meta property="og:description" content="Projects, vibe, and contact." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alinaarakelyan.com" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <div class="wrap topbar__inner">
+        <a class="brand" href="#top" aria-label="Home">
+          <span class="brand__spark" aria-hidden="true">A</span>
+          <span class="brand__text">Alina</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#now">Now</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="topbar__actions">
+          <button class="chip" id="copyEmail" type="button" title="Copy email">
+            Copy email
+          </button>
+          <button class="chip chip--icon" id="toggleTheme" type="button" aria-label="Toggle theme" title="Toggle theme">
+            <span id="themeIcon" aria-hidden="true">☾</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="wrap hero__grid">
+          <div class="hero__left">
+            <p class="kicker">
+              Full-stack engineer • hospital tech • systems at scale
+            </p>
+            <h1 class="headline">
+                I design reliable systems that hold up in the real world.
+            </h1>
+            <p class="subhead">
+                I’m Alina, a senior software engineer focused on reliability, system design, and product clarity. I help teams solve complex problems and ship technology that works in real, high-stakes environments.           
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#work">
+                See work
+                <span aria-hidden="true">→</span>
+              </a>
+              <a class="btn btn--ghost" href="#contact">
+                Say hi
+              </a>
+            </div>
+
+            <div class="badges" aria-label="Highlights">
+              <span class="badge">Java</span>
+              <span class="badge">JS/TS</span>
+              <span class="badge">MySQL / Oracle</span>
+              <span class="badge">Accessibility-minded</span>
+              <span class="badge">AI-curious</span>
+            </div>
+          </div>
+
+          <div class="hero__right">              
+            <div class="card card--tilt" id="tiltCard">
+              <div class="card__top">
+                <span class="pill">Currently</span>
+                <span class="mono">Designing + delivering at scale</span>
+              </div>
+
+              <div class="card__body">
+                <p class="card__title">What I’m focused on</p>
+
+                <ul class="list">
+                  <li><span class="dot"></span> Healthcare platforms in production environments</li>
+                  <li><span class="dot"></span> System reliability, incident response, and UX clarity</li>
+                  <li><span class="dot"></span> Exploring practical AI for real products</li>
+                </ul>
+
+                <div class="meter" aria-label="Vibes meter">
+                  <div class="meter__label">
+                    <span class="mono">Vibe</span>
+                    <span class="mono" id="vibeValue">92%</span>
+                  </div>
+                  <div class="meter__bar">
+                    <div class="meter__fill" id="vibeFill" style="width: 92%"></div>
+                  </div>
+                  <button class="chip chip--small" id="vibeBtn" type="button">Boost vibe ✨</button>
+                </div>
+              </div>
+
+              <div class="card__footer mono">
+                Built for real production environments • systems-minded • user-aware
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg" aria-hidden="true">
+          <div class="blob blob--a"></div>
+          <div class="blob blob--b"></div>
+          <div class="grain"></div>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section class="section" id="work">
+        <div class="wrap">
+          <div class="section__head">
+            <h2>Selected work</h2>
+          </div>
+
+          <div class="grid">
+            <article class="work">
+              <div class="work__meta">
+                <span class="tag">Healthcare</span>
+                <span class="tag">Frontend</span>
+                <span class="tag">iOS</span>
+              </div>
+              <h3>Network Resilience for Hospital iPads</h3>
+              <p>
+                Architected and implemented an automated network recovery system for hospital-deployed iPads, handling captive portals, WiFi transitions, and transient outages. Introduced heartbeat monitoring and intelligent retry logic to restore connectivity without manual intervention, directly resolving production incidents at multiple client sites.              </p>
+              <div class="work__links">
+                <!-- <a class="link" href="#" aria-disabled="true">Case study (add)</a> -->
+                <!-- <span class="sep">•</span> -->
+                <span class="mono">Network • iOS • WebKit • Resilience</span>
+              </div>
+            </article>
+
+            <article class="work">
+              <div class="work__meta">
+                <span class="tag">Platform</span>
+                <span class="tag">Backend</span>
+                <span class="tag">DB</span>
+              </div>
+              <h3>Extending hardware lifespan through cross-platform design</h3>
+              <p>
+                Designed, extended, and maintained hospital door sign systems deployed across multiple generations of iPads and HatchMed lighting enclosures. Balanced new feature development with long-term hardware compatibility, ensuring consistent behavior across evolving iPadOS versions, device capabilities, and enclosure-controlled lighting systems.
+                <br>
+                Delivered full-stack enhancements including motion detection, brightness control, and lighting coordination while preserving stability for existing deployments. Reduced screen burn-in and extended iPad hardware lifespan in 24/7 clinical environments.              </p>
+              <div class="work__links">
+                <!-- <a class="link" href="#" aria-disabled="true">Write-up (add)</a> -->
+                <!-- <span class="sep">•</span> -->
+                <span class="mono">Java • Angular • JavaScript/TypeScript • iOS Vision</span>
+              </div>
+            </article>
+
+            <article class="work">
+              <div class="work__meta">
+                <span class="tag">Accessibility</span>
+                <span class="tag">Hardware-aware</span>
+                <span class="tag">Patient-facing</span>
+              </div>
+              <h3>Raising accessibility standards across patient-facing systems</h3>
+              <p>
+                Led accessibility improvements across multiple applications, raising Lighthouse scores from 67 to 91 through semantic HTML, ARIA patterns, keyboard navigation, and screen reader support. Conducted cross-platform research for Samsung and LG TV accessibility and produced documentation to guide future development and client decisions.
+              </p>
+              <div class="work__links">
+                <!-- <a class="link" href="#" aria-disabled="true">Live demo (add)</a> -->
+                <!-- <span class="sep">•</span> -->
+                <span class="mono">HTML • CSS • ARIA • TV Platforms</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="wrap twoCol">
+          <div>
+            <h2>About</h2>
+            <p class="lead">
+            Senior engineer with a systems and consulting mindset, focused on reliability, clarity, and long-term impact.
+            </p>
+            <p>How I approach systems:</p>
+                <ul>
+                    <li>Design for longevity, not just launch day</li>
+                    <li>Maintain compatibility across hardware generations and operating systems</li>
+                    <li>Treat real-world constraints as first-class requirements</li>              
+                    <li>Optimize for reliability in environments where failure is not an option</li>
+                </ul>
+                <p>
+                I specialize in designing and maintaining software systems that operate reliably across changing hardware, platforms, and real-world constraints.
+                </p>
+
+            <div class="mini">
+              <div class="mini__item">
+                <span class="mini__label">Based</span>
+                <span class="mini__value">Brooklyn, NY</span>
+              </div>
+              <div class="mini__item">
+                <span class="mini__label">Focus</span>
+                <span class="mini__value">Healthcare Tech</span>
+              </div>
+              <div class="mini__item">
+                <span class="mini__label">Energy</span>
+                <span class="mini__value">Playful by Nature, Rigorous by Default</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="aside">
+                <div class="aside__card portraitCard">
+                <button class="portraitFlip" id="portraitFlip" type="button" aria-label="Flip portrait card">
+                    <div class="portraitFlip__inner">
+                    <div class="portraitFlip__face portraitFlip__front">
+                        <span class="sparkle2" aria-hidden="true"></span>
+                        <span class="sigil" aria-hidden="true">✦</span>
+                        <span class="mono small">Tap to flip</span>
+                        <span class="portraitFlip__title">Hi, I’m Alina</span>
+                        <span class="portraitFlip__sub">Senior Software Engineer</span>
+                    </div>
+
+                    <div class="portraitFlip__face portraitFlip__back">
+                        <img src="./assets/Alina.PNG" alt="Photo of Alina" class="portraitImg" loading="lazy" />
+                    </div>
+                    </div>
+                </button>
+                </div>
+
+              
+            <div class="aside__card">
+              <h3>Quick facts</h3>
+              <ul class="facts">
+                <li><span aria-hidden="true">🧠</span> Senior Software Engineer, Healthcare Tech</li>
+                <li><span aria-hidden="true">🌊</span> Beach days and hiking trails</li>
+                <li><span aria-hidden="true">🛠️</span> Java, TypeScript, JS, Python, SQL</li>
+                <li><span aria-hidden="true">🧩</span> Angular, React, HTML, CSS</li>
+                <li><span aria-hidden="true">🔒</span> Reliability, Correctness, Accessibility</li>
+                <li><span aria-hidden="true">🎶</span> Live music enthusiast</li>
+                <li><span aria-hidden="true">📚</span> Lifelong learner</li>
+                <li><span aria-hidden="true">🐾</span> <button class="cuteLink" id="openCuteness" type="button">Cat and dog mom (pics!)</button></li>
+              </ul>     
+            </div>         
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="now">
+        <div class="wrap">
+          <div class="section__head">
+            <h2>My Current Events</h2>
+            <p>Leveling up and killing it in...</p>
+          </div>
+
+          <div class="now">
+            <div class="now__item">
+              <p class="mono small">Learning</p>
+              <p class="now__text">ML + practical AI for product teams (the non-hype kind).</p>
+            </div>
+            <div class="now__item">
+              <p class="mono small">Building</p>
+              <p class="now__text">Cleaner, more accessible UI patterns in healthcare software.</p>
+            </div>
+            <div class="now__item">
+              <p class="mono small">Looking for</p>
+              <p class="now__text">Teams that value clarity, ownership, and good vibes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contact">
+        <div class="wrap contact">
+          <div>
+            <h2>Let’s talk</h2>
+            <p class="lead">
+              Want to collaborate, hire me, or just say hi? Easy.
+            </p>
+            <div class="contact__buttons">
+              <a class="btn btn--primary" id="emailBtn" href="mailto:alinaarakelyan90@gmail.com">
+                Email me
+              </a>
+              <button class="btn btn--ghost" id="copyLink" type="button">
+                Copy site link <span aria-hidden="true">⤴</span>
+              </button>
+            </div>
+            <p class="mono small" id="toast" role="status" aria-live="polite"></p>
+          </div>
+
+          <div class="socialIcons" aria-label="Find me">
+            <a class="iconLink" href="https://www.linkedin.com/in/alina-arakelyan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.67H7.31V9h3.41v1.56h.05c.47-.9 1.62-1.86 3.33-1.86 3.56 0 4.21 2.34 4.21 5.38v6.37zM5.3 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.08 20.45H3.52V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/>
+              </svg>
+              <span class="iconLabel">LinkedIn</span>
+            </a>
+          
+            <a
+            class="iconLink"
+            href="./assets/AlinaArakelyanSeniorSWE.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Resume (PDF)"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <path d="M14 2v6h6"/>
+              <path d="M8 13h8"/>
+              <path d="M8 17h8"/>
+              <path d="M8 9h2"/>
+            </svg>
+            <span class="iconLabel">Resume</span>
+          </a>
+          
+          </div>
+          
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="cutenessModal" aria-hidden="true">
+        <div class="modal__backdrop" data-close-cuteness="true"></div>
+      
+        <div class="modal__panel modal__panel--wide" role="dialog" aria-modal="true" aria-labelledby="cutenessTitle">
+          <div class="modal__head">
+            <h3 id="cutenessTitle">Cuteness overload</h3>
+            <button class="modal__close" type="button" id="closeCuteness" aria-label="Close">✕</button>
+          </div>
+      
+          <div class="album" aria-label="Photo album">
+            <figure class="polaroid polaroid--a">
+              <img src="./assets/reggie2.jpg" alt="Reggie" loading="lazy" />
+              <figcaption>Reggie</figcaption>
+            </figure>
+      
+            <figure class="polaroid polaroid--b">
+              <img src="./assets/gigi.jpg" alt="Gigi" loading="lazy" />
+              <figcaption>Gigi</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>      
+      
+    <div class="modal" id="llamaModal" aria-hidden="true">
+        <div class="modal__backdrop" data-close-llama="true"></div>
+      
+        <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="llamaTitle">
+          <div class="modal__head">
+            <h3 id="llamaTitle">100% vibe unlocked</h3>
+            <button class="modal__close" type="button" id="closeLlama" aria-label="Close">✕</button>
+          </div>
+      
+          <div style="padding: 16px;">
+            <p style="margin-bottom: 12px; color: var(--muted); font-weight: 700;">
+              You found the Easter Egg! Machu Picchu llama sends you good vibes ✨🦙
+            </p>
+      
+            <img
+              src="./assets/llama.jpg"
+              alt="Photo at Machu Picchu with a llama"
+              class="llamaImage"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      
+      
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <span class="mono small">© <span id="year"></span> Alina Arakelyan</span>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
