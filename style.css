@@ -128,7 +128,10 @@
   h2{ font-size: clamp(1.6rem, 2.2vw, 2.2rem); }
   h3{ font-size:1.2rem; }
   
-  .mono{ font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+  .mono{ 
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    padding-left: 2vw;
+   }
   .small{ font-size: 0.92rem; }
   .lead{ font-size: 1.1rem; color: var(--muted); max-width: 56ch; }
   .kicker{ color: var(--muted); max-width: 60ch; }
