@@ -1177,6 +1177,30 @@
     flex-wrap: wrap;
     gap: 8px;
   }
+
+  :root{ --topbarH: 86px; }
+
+  .topbar{
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .topbar__inner{
+    padding: 12px 0;
+    min-height: var(--topbarH);
+    align-items: center;
+  }
+
+  .chip--icon{
+    height: 44px;
+    width: 44px;
+    display: grid;
+    place-items: center;
+    line-height: 1;
+  }
+
+  body{
+    padding-top: calc(var(--topbarH) + env(safe-area-inset-top));
+  }
 }
 
 
