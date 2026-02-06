@@ -68,6 +68,17 @@ const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
   let vibe = 92;
 
   btn.addEventListener("click", () => {
+    // If already maxed, re-open llama every time
+    if (vibe >= 100) {
+      vibe = 100;
+      fill.style.width = `100%`;
+      val.textContent = `100%`;
+      toast("100% vibe 🦙✨");
+      sparkleBurst();
+      if (window.__openLlamaEasterEgg) window.__openLlamaEasterEgg();
+      return;
+    }
+
     const bump = Math.floor(Math.random() * 6) + 1;
     vibe = clamp(vibe + bump, 0, 100);
     fill.style.width = `${vibe}%`;
@@ -75,13 +86,13 @@ const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
     toast(`Vibe boosted to ${vibe}% ✨`);
     sparkleBurst();
 
-    // Easter egg: fire once when hitting 100%
+    // Easter egg
     if (vibe === 100 && !window.__llamaUnlocked) {
-        window.__llamaUnlocked = true;
-        setTimeout(() => {
+      window.__llamaUnlocked = true;
+      setTimeout(() => {
         toast("100% vibe unlocked 🦙✨");
         if (window.__openLlamaEasterEgg) window.__openLlamaEasterEgg();
-        }, 350);
+      }, 350);
     }
   });
 
@@ -111,6 +122,7 @@ const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
     }
   }
 })();
+
 
 (function copyStuff(){
   const email = "alinaarakelyan90@gmail.com";

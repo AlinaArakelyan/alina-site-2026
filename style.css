@@ -130,7 +130,6 @@
   
   .mono{ 
     font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-    padding-left: 2vw;
    }
   .small{ font-size: 0.92rem; }
   .lead{ font-size: 1.1rem; color: var(--muted); max-width: 56ch; }
@@ -148,6 +147,11 @@
     background: var(--card); outline:1px solid var(--line);
     z-index:9999;
   }
+
+  .card__top{
+    gap: 12px;
+  }
+  
 
   body{
     padding-top: 74px;
@@ -963,7 +967,6 @@
     display: block;
   }
   
- /* ---- Portrait front (clean layers) ---- */
 .portraitFlip__front{
   padding: 22px;
   height: 100%;
@@ -971,19 +974,16 @@
   overflow: hidden;
   isolation: isolate;
 
-  /* your base background */
   background:
     radial-gradient(900px 420px at 20% 10%, rgba(255,59,189,0.20), transparent 60%),
     radial-gradient(900px 420px at 85% 90%, rgba(124,77,255,0.18), transparent 55%),
     linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
 
-  /* border ring without pseudo-elements */
   box-shadow:
     0 0 0 1px color-mix(in oklab, var(--accent3) 55%, var(--line)) inset,
     0 0 0 1px rgba(255,255,255,0.04) inset;
 }
 
-/* keep text/content above sparkles */
 .portraitFlip__front > *{
   position: relative;
   z-index: 2;
@@ -1033,7 +1033,26 @@
   will-change: background-position;
 }
 
-/* seamless loop because end position == 1 tile */
+[data-theme="light"] .portraitFlip__front::before{
+  opacity: 0.36;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(124,58,237,0.75) 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 25%, rgba(147,51,234,0.70) 0 2px, transparent 3px),
+    radial-gradient(circle at 35% 70%, rgba(99,102,241,0.62) 0 2px, transparent 3px),
+    radial-gradient(circle at 65% 80%, rgba(76,29,149,0.45) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 20% 85%, rgba(124,58,237,0.55) 0 1.5px, transparent 3px);
+}
+
+[data-theme="light"] .portraitFlip__front::after{
+  opacity: 0.22;
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(88,28,135,0.35) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 55% 25%, rgba(124,58,237,0.40) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 80% 40%, rgba(99,102,241,0.34) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 25% 65%, rgba(147,51,234,0.30) 0 1.5px, transparent 3px);
+}
+
+
 @keyframes sparkleFall1{
   from { background-position: 0 0; }
   to   { background-position: 0 240px; }
@@ -1050,7 +1069,6 @@
   }
 }
 
-/* --- FIX: portrait card text looks black / unstyled --- */
 .portraitFlip__front,
 .portraitFlip__front *{
   color: rgba(255,255,255,0.92) !important;
@@ -1080,7 +1098,6 @@
   font-weight: 750;
   text-shadow: 0 10px 24px rgba(0,0,0,0.45);
 }
-
   
 /* ---------- Mobile (phones) ---------- */
 @media (max-width: 768px) {
